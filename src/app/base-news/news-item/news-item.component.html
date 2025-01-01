@@ -1,0 +1,14 @@
+<mat-card class="news-item" appearance="outlined">
+  <mat-card-header class="news-item__header">
+    <mat-card-title>{{item.title}}</mat-card-title>
+    <mat-card-subtitle>{{item.news_site}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="news-item__content">
+    <div class="news-item__img">
+      <img  mat-card-image [src]="item.image_url" [alt]="item.title">
+    </div>
+    <p class="news-item__p">
+      {{item.summary}}
+    </p>
+  </mat-card-content>
+</mat-card>

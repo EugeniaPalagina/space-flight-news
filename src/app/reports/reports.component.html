@@ -1,0 +1,11 @@
+<ngx-spinner type="ball-scale-multiple" [showSpinner]="(loading$ | async) ?? true"></ngx-spinner>
+
+<mat-grid-list cols="1" rowHeight="350px" >
+  @if (reportsStore$ | async; as reportsStore) {
+    @for (report of reportsStore; track report.id) {
+      <mat-grid-tile>
+        <app-news-item [item]="report"></app-news-item>
+      </mat-grid-tile>
+    }
+  }
+</mat-grid-list>
