@@ -24,7 +24,6 @@ export class ArticlesFilterComponent {
   @Output() onSubmitEmit = new EventEmitter();
 
   public formData: FormGroup;
-  private articlesStore = inject(ArticlesStoreService);
 
   constructor() {
     this.formData = new FormGroup({

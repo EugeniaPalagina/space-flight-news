@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ArticlesFilterComponent } from './articles-filter.component';
+import {ArticlesStoreService} from '../articles.store.service';
 
 describe('ArticlesFilterComponent', () => {
   let component: ArticlesFilterComponent;
@@ -8,13 +9,13 @@ describe('ArticlesFilterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ArticlesFilterComponent]
+      imports: [ArticlesFilterComponent],
+      providers: [ArticlesStoreService]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(ArticlesFilterComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

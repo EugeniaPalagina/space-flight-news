@@ -1,4 +1,4 @@
-export interface BaseResponseInterface<T> extends Response {
+export interface BaseResponseInterface<T>{
   count: number;
   results: T[]
 }

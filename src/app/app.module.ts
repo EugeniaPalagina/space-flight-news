@@ -1,6 +1,6 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
-import {MatTabGroup, MatTabLink, MatTabNav, MatTabNavPanel} from '@angular/material/tabs';
+import {MatTabsModule} from '@angular/material/tabs';
 import {RouterOutlet} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
 import {ArticlesComponent} from './articles/articles.component';
@@ -21,10 +21,7 @@ import {NgxSpinnerModule} from 'ngx-spinner';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    MatTabGroup,
-    MatTabNav,
-    MatTabLink,
-    MatTabNavPanel,
+    MatTabsModule,
     RouterOutlet,
     ArticlesComponent,
     BlogsComponent,

@@ -13,5 +13,5 @@ import {ArticleInterface} from '../../models/articles/article.interface';
 })
 export class NewsItemComponent {
 
-  @Input() item!: any;
+  @Input() item!: BaseNewsInterface;
 }
