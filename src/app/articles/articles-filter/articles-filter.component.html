@@ -1,12 +1,12 @@
 <div class="article-filter">
   <form class="article-filter__form" [formGroup]="formData">
-    <mat-form-field>
+    <mat-form-field class="article-filter__form-input">
       <mat-label>Articles count</mat-label>
       <input formControlName="limit"
              matInput maxlength="5"
              placeholder="number"
              pattern="[0-9]{0,5}">
     </mat-form-field>
-    <button mat-flat-button (click)="onSubmit()">Filter</button>
+    <button class="article-filter__form-button" mat-flat-button (click)="onSubmit()">Filter</button>
   </form>
 </div>

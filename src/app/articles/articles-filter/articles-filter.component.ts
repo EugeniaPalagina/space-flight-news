@@ -27,7 +27,7 @@ export class ArticlesFilterComponent {
 
   constructor() {
     this.formData = new FormGroup({
-      limit: new FormControl(10, Validators.maxLength(5)),
+      limit: new FormControl('10', Validators.maxLength(5)),
     });
   }
 
