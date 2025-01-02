@@ -1,16 +1,8 @@
-<ngx-spinner type="ball-scale-multiple" [showSpinner]="(loading$ | async) ?? true"></ngx-spinner>
-
-<app-articles-filter
-  (onSubmitEmit)="loadItems($event)"
-></app-articles-filter>
-
-<mat-grid-list cols="1" rowHeight="350px" >
-  @if (newsList$ | async; as newsList) {
-    @for (news of newsList; track news.id) {
-      <mat-grid-tile>
-        <app-news-item [item]="news"></app-news-item>
-      </mat-grid-tile>
-    }
-  }
-</mat-grid-list>
-
+<news-container
+  [newsList]="(newsList$ | async) ?? []"
+  [loading]="(loading$ | async) ?? true"
+>
+  <app-articles-filter
+    (onSubmitEmit)="loadItems($event)"
+  ></app-articles-filter>
+</news-container>

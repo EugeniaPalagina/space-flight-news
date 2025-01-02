@@ -1,0 +1,9 @@
+<ngx-spinner type="ball-scale-multiple" [showSpinner]="loading"></ngx-spinner>
+<ng-content></ng-content>
+<mat-grid-list cols="1" rowHeight="350px">
+  @for (news of newsList; track news.id) {
+    <mat-grid-tile>
+      <app-news-item [item]="news"></app-news-item>
+    </mat-grid-tile>
+  }
+</mat-grid-list>

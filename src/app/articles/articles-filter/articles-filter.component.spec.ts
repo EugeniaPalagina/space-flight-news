@@ -23,15 +23,15 @@ describe('ArticlesFilterComponent', () => {
   });
 
   it('should initialize form with default value', () => {
-    expect(component.formData.value).toEqual({ limit: 10 });
+    expect(component.formData.value).toEqual({ limit: '10' });
   });
 
   it('should emit form value on valid submit', () => {
     const spy = spyOn(component.onSubmitEmit, 'emit');
-    component.formData.setValue({ limit: 20 });
+    component.formData.setValue({ limit: '20' });
     component.onSubmit();
 
-    expect(spy).toHaveBeenCalledWith({ limit: 20 });
+    expect(spy).toHaveBeenCalledWith({ limit: '20' });
   });
 
   it('should not emit form value if form is invalid', () => {

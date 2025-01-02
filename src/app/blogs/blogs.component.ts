@@ -1,22 +1,17 @@
 import {Component} from '@angular/core';
 import {BlogsStoreService} from './blogs.store.service';
 import {AsyncPipe} from '@angular/common';
-import {MatGridList, MatGridTile} from '@angular/material/grid-list';
-import {NewsItemComponent} from '../base-news/news-item/news-item.component';
-import {NgxSpinnerComponent} from 'ngx-spinner';
 import {BlogInterface} from '../models/blogs/blog.interface';
 import {BaseNewsComponent} from '../base-news/base-news.component';
+import {NewsContainerComponent} from '../base-news/news-container/news-container.component';
 
 @Component({
   selector: 'app-blogs',
   imports: [
     AsyncPipe,
-    MatGridList,
-    MatGridTile,
-    NewsItemComponent,
-    NgxSpinnerComponent
+    NewsContainerComponent
   ],
-  templateUrl: './blogs.component.html',
+  templateUrl: 'blogs.component.html',
   styleUrl: './blogs.component.scss',
   providers: [BlogsStoreService]
 })
