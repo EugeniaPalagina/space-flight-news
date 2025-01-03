@@ -1,10 +1,8 @@
-import {Component, EventEmitter, inject, Output} from '@angular/core';
-import {MatButton, MatButtonModule} from "@angular/material/button";
-import {MatFormField, MatFormFieldModule, MatLabel} from "@angular/material/form-field";
+import {Component, EventEmitter, Output} from '@angular/core';
+import {MatButtonModule} from "@angular/material/button";
+import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {MatInput, MatInputModule} from "@angular/material/input";
-import {FormControl, FormGroup, PatternValidator, ReactiveFormsModule, Validators} from '@angular/forms';
-import {ArticlesStoreService} from '../articles.store.service';
-import {shareReplay} from 'rxjs';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-articles-filter',
