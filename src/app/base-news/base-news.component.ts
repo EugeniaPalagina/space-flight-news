@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {BaseDataService} from '../services/base-data.service';
-import {BaseRequestInterface} from '../models/base.request.interface';
-import {BaseResponseInterface} from '../models/base.response.interface';
+import {BaseNewsRequestInterface} from '../models/base-news.request.interface';
+import {BaseNewsResponseInterface} from '../models/base-news.response.interface';
 import {BaseNewsInterface} from '../models/base-news.interface';
 
 @Component({
@@ -28,10 +28,10 @@ export class BaseNewsComponent<T extends BaseNewsInterface> implements OnInit {
     this.loadItems({limit: this.STARTED_NEWS_COUNT});
   }
 
-  loadItems(data: BaseRequestInterface): void {
+  loadItems(data: BaseNewsRequestInterface): void {
     this.loadingInner$.next(true);
     this.dataService.getNews(data)
-      .subscribe((response: BaseResponseInterface<T>) => {
+      .subscribe((response: BaseNewsResponseInterface<T>) => {
         this.newsListInner$.next(response.results);
         this.loadingInner$.next(false);
       });

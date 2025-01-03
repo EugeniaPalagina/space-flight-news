@@ -1,9 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {BaseRequestInterface} from '../models/base.request.interface';
-import {BaseResponseInterface} from '../models/base.response.interface';
-import {ArticlesResponseInterface} from '../models/articles/articles.response.interface';
+import {BaseNewsRequestInterface} from '../models/base-news.request.interface';
+import {BaseNewsResponseInterface} from '../models/base-news.response.interface';
 import {BaseDataAbstractService} from './base-data.abstract.service';
 
 @Injectable({
@@ -20,10 +19,10 @@ export abstract class BaseDataService<T> extends BaseDataAbstractService<T>{
     super();
   }
 
-  getNews(data: BaseRequestInterface): Observable<BaseResponseInterface<T>> {
+  getNews(data: BaseNewsRequestInterface): Observable<BaseNewsResponseInterface<T>> {
     data.ordering = this.orderingByLastTime;
     const url = this.apiUrl + `/${this.endpoint}`;
-    return this.http.get<BaseResponseInterface<T>>(url, {params: {...data}});
+    return this.http.get<BaseNewsResponseInterface<T>>(url, {params: {...data}});
   }
 
   getNewsById(id: number): Observable<T> {

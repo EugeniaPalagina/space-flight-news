@@ -1,6 +1,6 @@
 import {BaseDataService} from './base-data.service';
 import {TestBed} from '@angular/core/testing';
-import {BaseRequestInterface} from '../models/base.request.interface';
+import {BaseRequestInterface} from '../models/base-news.request.interface';
 import {BaseDataServiceMock} from './base-data.service.mock';
 
 describe('TestDataService with Mock', () => {

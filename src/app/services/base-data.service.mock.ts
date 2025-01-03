@@ -1,12 +1,12 @@
 import {Observable, of} from 'rxjs';
-import {BaseRequestInterface} from '../models/base.request.interface';
-import {BaseResponseInterface} from '../models/base.response.interface';
+import {BaseNewsRequestInterface} from '../models/base-news.request.interface';
+import {BaseNewsResponseInterface} from '../models/base-news.response.interface';
 import {ArticleInterface} from '../models/articles/article.interface';
 
 export class BaseDataServiceMock<T> {
 
-  getNews(data: BaseRequestInterface): Observable<BaseResponseInterface<T>> {
-    return of(<BaseResponseInterface<T>>{
+  getNews(data: BaseNewsRequestInterface): Observable<BaseNewsResponseInterface<T>> {
+    return of(<BaseNewsResponseInterface<T>>{
       count: 1,
       results: [
         {
