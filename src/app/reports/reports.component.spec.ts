@@ -1,10 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ReportsComponent } from './reports.component';
+import {ReportsComponent} from './reports.component';
 import {ReportsStoreService} from './reports.store.service';
 import {HttpClient, HttpHandler} from '@angular/common/http';
-import {BaseDataService} from '../services/base-data.service';
-import {BaseDataServiceMock} from '../services/base-data.service.mock';
 
 describe('ReportsComponent', () => {
   let component: ReportsComponent;

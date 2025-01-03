@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ArticlesFilterComponent } from './articles-filter.component';
 import {ArticlesStoreService} from '../articles.store.service';
 
@@ -40,7 +39,6 @@ describe('ArticlesFilterComponent', () => {
     component.formData.setValue({ limit: '123456' });
     component.onSubmit();
 
-    console.log(component.formData.value)
     expect(spy).not.toHaveBeenCalled();
   });
 

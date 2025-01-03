@@ -14,10 +14,10 @@ export class BaseNewsComponent<T extends BaseNewsInterface> implements OnInit {
   public loading$: Observable<boolean>;
 
   private newsListInner$ = new BehaviorSubject<T[]>([]);
+
   private loadingInner$ = new BehaviorSubject(false);
 
   private readonly STARTED_NEWS_COUNT = 10;
-
 
   constructor(protected dataService: BaseDataService<T>) {
     this.newsList$ = this.newsListInner$.asObservable();

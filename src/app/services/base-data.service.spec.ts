@@ -1,6 +1,6 @@
 import {BaseDataService} from './base-data.service';
 import {TestBed} from '@angular/core/testing';
-import {BaseRequestInterface} from '../models/base-news.request.interface';
+import {BaseNewsRequestInterface} from '../models/base-news.request.interface';
 import {BaseDataServiceMock} from './base-data.service.mock';
 
 describe('TestDataService with Mock', () => {
@@ -18,7 +18,7 @@ describe('TestDataService with Mock', () => {
   });
 
   it('should get mock news', (done: DoneFn) => {
-    const requestData: BaseRequestInterface = { limit: 1, ordering: ['-published_at', '-updated_at'] };
+    const requestData: BaseNewsRequestInterface = { limit: 1, ordering: ['-published_at', '-updated_at'] };
 
     service.getNews(requestData).subscribe((response) => {
       expect(response).toBeTruthy();

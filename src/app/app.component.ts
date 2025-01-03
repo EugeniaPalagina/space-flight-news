@@ -20,7 +20,6 @@ export class AppComponent implements OnInit {
   activeLink = signal(this.links[0]);
 
   constructor(private route: ActivatedRoute, private router: Router) {
-
   }
 
   ngOnInit(): void {

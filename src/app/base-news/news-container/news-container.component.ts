@@ -21,6 +21,4 @@ export class NewsContainerComponent {
   @Input() newsList!: ReportInterface[] | ArticleInterface[] | BlogInterface[];
 
   @Input() loading!: boolean;
-
-
 }
